@@ -6,7 +6,7 @@
 #    By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/02 15:53:52 by eguelin           #+#    #+#              #
-#    Updated: 2023/12/07 18:55:00 by eguelin          ###   ########lyon.fr    #
+#    Updated: 2023/12/07 18:49:46 by eguelin          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@
 #                                   Variable                                   #
 # **************************************************************************** #
 
-NAME	= whatever
+NAME	= iter
 OBJ_DIR	= .obj/
 SRC_DIR	= src/
 INC_DIR	= include/
