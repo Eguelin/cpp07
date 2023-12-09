@@ -6,9 +6,12 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:50:00 by eguelin           #+#    #+#             */
-/*   Updated: 2023/12/09 13:18:24 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/12/09 15:17:40 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ITER_HPP
+# define ITER_HPP
 
 #include <iostream>
 
@@ -24,3 +27,5 @@ void	ft_print( const T src )
 {
 	std::cout << src << " ";
 }
+
+#endif

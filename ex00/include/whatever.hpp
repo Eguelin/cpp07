@@ -6,9 +6,12 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:50:00 by eguelin           #+#    #+#             */
-/*   Updated: 2023/12/07 17:58:37 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/12/09 15:16:47 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef WHATEVER_HPP
+# define WHATEVER_HPP
 
 #include <iostream>
 
@@ -33,3 +36,5 @@ const T	&max( T &a, T &b)
 {
 	return ( a >= b ? a : b);
 }
+
+#endif
