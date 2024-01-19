@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 15:06:39 by eguelin           #+#    #+#             */
-/*   Updated: 2023/12/08 18:34:47 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2024/01/17 17:10:19 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Array
 	public:
 
 /* ************************************************************************** */
-/*                                 Constructor                                */
+/*                         Constructors & Destructors                         */
 /* ************************************************************************** */
 
 		Array( void )
@@ -47,14 +47,7 @@ class Array
 		{
 			this->_array = new T[n];
 			this->_size = n;
-
-			for (unsigned int i = 0; i < n; i++)
-				this->_array[i] = 0;
 		};
-
-/* ************************************************************************** */
-/*                                 Destructor                                 */
-/* ************************************************************************** */
 
 		~Array( void )
 		{
@@ -82,6 +75,14 @@ class Array
 		}
 
 		T	&operator[]( unsigned int index )
+		{
+			if (index >= this->_size)
+				throw IndexOutOfRangeException();
+
+			return (this->_array[index]);
+		}
+
+		const T	&operator[]( unsigned int index ) const
 		{
 			if (index >= this->_size)
 				throw IndexOutOfRangeException();

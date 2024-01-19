@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 15:48:04 by eguelin           #+#    #+#             */
-/*   Updated: 2023/12/09 14:31:40 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2024/01/17 17:13:37 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,43 @@
 int main( void )
 {
 	{
+		Array<std::string>	arrayString(54);
+
+		try
+		{
+			arrayString[0] = "Hello";
+
+			Array<std::string>	arrayString2(arrayString);
+
+			arrayString[0] = "World";
+
+			Array<std::string>		arrayString3;
+
+			arrayString3 = arrayString;
+
+			arrayString[0] = "42";
+
+			std::cout << "arrayString[0]: " << arrayString[0] << std::endl;
+			std::cout << "arrayString2[0]: " << arrayString2[0] << std::endl;
+			std::cout << "arrayString3[0]: " << arrayString3[0] << std::endl;
+			std::cout << "arrayString3[1]: " << arrayString3[1] << std::endl;
+
+			std::cout << "Size of arrayString: " << arrayString.size() << std::endl;
+			std::cout << "Size of arrayString2: " << arrayString2.size() << std::endl;
+			std::cout << "Size of arrayString3: " << arrayString3.size() << std::endl;
+
+			arrayString3[-1] = "0";
+		}
+		catch(const std::exception &e)
+		{
+			std::cerr << e.what() << std::endl;
+		}
+	}
+	std::cout << std::endl;
+	{
 		Array<int *>	arrayInt(54);
+		for (size_t i = 0; i < arrayInt.size(); i++)
+			arrayInt[i] = NULL;
 		int				i = 0;
 
 		try
@@ -23,10 +59,14 @@ int main( void )
 			arrayInt[0] = &i;
 
 			Array<int *>	arrayInt2(arrayInt);
+			for (size_t i = 0; i < arrayInt2.size(); i++)
+				arrayInt2[i] = NULL;
 
 			arrayInt[0] = NULL;
 
 			Array<int *>		arrayInt3;
+			for (size_t i = 0; i < arrayInt3.size(); i++)
+				arrayInt3[i] = NULL;
 
 			arrayInt3 = arrayInt;
 			arrayInt[0] = &i;
@@ -50,16 +90,22 @@ int main( void )
 	std::cout << std::endl;
 	{
 		Array<int>	arrayInt(54);
+		for (size_t i = 0; i < arrayInt.size(); i++)
+			arrayInt[i] = 0;
 
 		try
 		{
 			arrayInt[0] = 1;
 
 			Array<int>	arrayInt2(arrayInt);
+			for (size_t i = 0; i < arrayInt2.size(); i++)
+				arrayInt2[i] = 0;
 
 			arrayInt[0] = 1;
 
 			Array<int>		arrayInt3;
+			for (size_t i = 0; i < arrayInt3.size(); i++)
+				arrayInt3[i] = 0;
 
 			arrayInt3 = arrayInt;
 			arrayInt[0] = 2;
@@ -83,16 +129,22 @@ int main( void )
 	std::cout << std::endl;
 	{
 		Array<char>	arrayChar(54);
+		for (size_t i = 0; i < arrayChar.size(); i++)
+			arrayChar[i] = '0';
 
 		try
 		{
 			arrayChar[0] = 'a';
 
 			Array<char>	arrayChar2(arrayChar);
+			for (size_t i = 0; i < arrayChar2.size(); i++)
+				arrayChar2[i] = '0';
 
 			arrayChar[0] = 'b';
 
 			Array<char>		arrayChar3;
+			for (size_t i = 0; i < arrayChar3.size(); i++)
+				arrayChar3[i] = '0';
 
 			arrayChar3 = arrayChar;
 			arrayChar[0] = 'c';
