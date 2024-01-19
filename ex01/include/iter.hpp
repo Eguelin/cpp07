@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:50:00 by eguelin           #+#    #+#             */
-/*   Updated: 2023/12/09 15:17:40 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2024/01/19 14:33:27 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,17 @@
 #include <iostream>
 
 template <typename T, typename I, typename R>
-void	iter( T *tab, I len, R (*ft)( const T ) )
+void	iter( T *tab, I len, R (*ft)( T & ) )
 {
 	for (I i = 0; i < len ; i++)
 		ft(tab[i]);
 }
 
-template <typename T>
-void	ft_print( const T src )
+template <typename T, typename I, typename R>
+void	iter( T *tab, I len, R (*ft)( const T & ) )
 {
-	std::cout << src << " ";
+	for (I i = 0; i < len ; i++)
+		ft(tab[i]);
 }
 
 #endif
