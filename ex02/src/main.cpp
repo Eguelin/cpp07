@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 15:48:04 by eguelin           #+#    #+#             */
-/*   Updated: 2024/01/17 17:13:37 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2024/02/07 18:51:59 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int main( void )
 		}
 		catch(const std::exception &e)
 		{
-			std::cerr << e.what() << std::endl;
+			std::cout << e.what() << std::endl;
 		}
 	}
 	std::cout << std::endl;
@@ -84,7 +84,7 @@ int main( void )
 		}
 		catch(const std::exception &e)
 		{
-			std::cerr << e.what() << std::endl;
+			std::cout << e.what() << std::endl;
 		}
 	}
 	std::cout << std::endl;
@@ -123,7 +123,7 @@ int main( void )
 		}
 		catch(const std::exception &e)
 		{
-			std::cerr << e.what() << std::endl;
+			std::cout << e.what() << std::endl;
 		}
 	}
 	std::cout << std::endl;
@@ -162,7 +162,7 @@ int main( void )
 		}
 		catch(const std::exception &e)
 		{
-			std::cerr << e.what() << std::endl;
+			std::cout << e.what() << std::endl;
 		}
 	}
 	return (0);
